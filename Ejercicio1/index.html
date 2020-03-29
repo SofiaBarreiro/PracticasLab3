@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+    <center>
+        <div id=formulario>
+            <table>
+                <thead>
+                    <p><strong>Ingrese su usuario y contraseña para ingresar</strong></p>
+                </thead>
+                <tr>
+                    <td> <label for=""><strong>Usuario</strong></label> </td>
+                    <td> <input id="inputUsuario" size="20" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for=""><strong>Contraseña</strong></label></td>
+                    <td> <input id="inputPassword" size="20" maxlength="8" type="password">
+                    </td>
+                </tr>
+                <tbody>
+                    <td colspan="2">
+                        <center>
+                            <input type="button" id="btnIniciar" value="Iniciar sesión">
+                        </center>
+                    </td>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div id="MensajeBienvenida">
+
+        </div>
+    </center>
+
+</body>
+
+</html>
+<style>
+    body {
+        background-color: crimson;
+    }
+    
+    #inputUsuario,
+    #inputPassword {
+        width: 250px;
+        height: 25px;
+    }
+    
+    #btnIniciar {
+        width: 110px;
+        height: 30px;
+    }
+</style>
