@@ -10,54 +10,143 @@
 
 <body>
 
-    <center>
-        <div id=formulario>
-            <table>
-                <thead>
-                    <p><strong>Ingrese su usuario y contraseña para ingresar</strong></p>
-                </thead>
+    <div id=formulario>
+        <table>
+
+            <tr>
+                <td> <label for=""><strong>Nombre</strong></label> </td>
+                <td> <input id="inputNombre" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td><label for=""><strong>Apellido</strong></label></td>
+                <td> <input id="inputApellido" maxlength="8" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td><label for=""><strong>Email</strong></label></td>
+                <td> <input id="inputEmail" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="filaBoton">
+                    <input type="button" id="btnIniciar" value="Iniciar sesión">
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div>
+
+        <table id="tabla">
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Accion</th>
+
+            <tbody>
                 <tr>
-                    <td> <label for=""><strong>Usuario</strong></label> </td>
-                    <td> <input id="inputUsuario" size="20" type="text">
-                    </td>
+                    <td>Sofia</td>
+                    <td>Barreiro</td>
+                    <td>barreirosofia@gmail.com</td>
+                    <td><a href="http://" target="_blank" rel="noopener noreferrer">Borrar</a></td>
                 </tr>
                 <tr>
-                    <td><label for=""><strong>Contraseña</strong></label></td>
-                    <td> <input id="inputPassword" size="20" maxlength="8" type="password">
-                    </td>
+                    <td>Sofia</td>
+                    <td>Barreiro</td>
+                    <td>barreirosofia@gmail.com</td>
+                    <td><a href="http://" target="_blank" rel="noopener noreferrer">Borrar</a></td>
                 </tr>
-                <tbody>
-                    <td colspan="2">
-                        <center>
-                            <input type="button" id="btnIniciar" value="Iniciar sesión">
-                        </center>
-                    </td>
-                </tbody>
-            </table>
+            </tbody>
+        </table>
 
-        </div>
+    </div>
 
-        <div id="MensajeBienvenida">
-
-        </div>
-    </center>
 
 </body>
 
 </html>
 <style>
-    body {
-        background-color: crimson;
+    * {
+        margin: 0px;
+        padding: 0px;
     }
     
-    #inputUsuario,
-    #inputPassword {
-        width: 250px;
-        height: 25px;
+    body {
+        background-color: #5668b8;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    #formulario {
+        background-color: lightseagreen;
+        border: 2px solid black;
+        color: black;
+        width: 30%;
+        margin: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 6px;
+        margin-top: 20px;
+    }
+    
+    table {
+        margin: auto;
+        box-sizing: border-box;
+    }
+    /*  table td,
+    table tr {
+        border: 1px solid black;
+    }
+     */
+    
+    #formulario td {
+        width: 100%;
     }
     
     #btnIniciar {
-        width: 110px;
-        height: 30px;
+        margin: auto;
+        width: 100%;
+        padding: 5px;
+    }
+    
+    input[type="text"] {
+        padding: 6px;
+        color: aqua;
+    }
+    
+    #filaBoton {
+        margin: auto;
+        width: 100%;
+    }
+    
+    #tabla {
+        margin: auto;
+        width: 50%;
+        padding: 6px;
+    }
+    
+    #tabla {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin-top: 30px;
+        background-color: white;
+    }
+    
+    #tabla tr,
+    #tabla td,
+    #tabla th {
+        border: 1px solid black;
+        padding-left: 10px;
+        text-align: left;
+        padding: 10px;
+    }
+    
+    #tabla th {
+        background-color: black;
+        color: white;
     }
 </style>

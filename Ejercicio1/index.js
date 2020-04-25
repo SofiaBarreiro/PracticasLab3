@@ -1,17 +1,5 @@
 window.onload = function() {
-
-    var usuario = "Sofiadb";
-    var contraseña = "123456";
-
-    var boton = document.getElementById("btnIniciar");
-
-    var inputUsuario = document.getElementById("inputUsuario");
-    var inputPassword = document.getElementById("inputPassword");
-    var formulario = document.getElementById("formulario");
-    var divMensaje = document.getElementById("MensajeBienvenida");
-
-
-    boton.addEventListener("click", function() {
+    /*     boton.addEventListener("click", function() {
 
 
         if (inputUsuario.value != "" && inputPassword.value != "") {
@@ -23,10 +11,8 @@ window.onload = function() {
                 inputUsuario.value = "";
             } else {
 
-                formulario.style.display = "none";
-                var mensajeBienvenida = document.createElement('h2');
-                mensajeBienvenida.innerText = "Bienvenido a la aplicación!!!";
-                divMensaje.append(mensajeBienvenida);
+                tabla.innerHTML = tabla.innerHTML + "<tr><td>Sofia</td><td>Barreiro</td><td>barreirosofia@gmail.com</td></tr>";
+
 
             }
 
@@ -36,6 +22,61 @@ window.onload = function() {
         }
 
     });
+
+ */
+
+
+    var inputNombre = document.getElementById("inputNombre");
+    var inputApellido = document.getElementById("inputApellido");
+    var inputEmail = document.getElementById("inputEmail");
+    var formulario = document.getElementById("formulario");
+    var tabla = document.getElementById("tabla");
+
+    boton = document.getElementById("btnIniciar");
+    inputNombre.value = "";
+    inputApellido.value = "";
+    inputEmail.value = "";
+
+
+    boton.addEventListener("click", function() {
+        if (inputNombre.value != "" && inputApellido.value != "" && inputEmail.value != "") {
+            tabla.innerHTML =
+                tabla.innerHTML +
+                "<tr><td>" + inputNombre.value + "</td><td>" + inputApellido.value + "</td><td>" + inputEmail.value + "</td>" +
+                "<td><a href='http://' target='_blank' rel='noopener noreferrer'>Borrar</a></td> </tr>";
+
+
+            inputNombre.value = "";
+            inputApellido.value = "";
+            inputEmail.value = "";
+
+        } else {
+            alert("Por favor complete todos los campos");
+            inputNombre.value = "";
+            inputApellido.value = "";
+            inputEmail.value = "";
+        }
+    });
+
+    var borrar = document.getElementsByTagName('a');
+
+    for (var i = 0; i < borrar.length; i++) {
+
+        console.log(borrar[i]);
+
+        borrar[i].onclick = function() {
+
+            console.log(this);
+
+            var columna = this.parentElement;
+            var fila = columna.parentElement;
+
+            fila.removeChild(columna);
+
+
+        };
+
+    }
 
 
 
