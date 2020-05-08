@@ -4,20 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
     <title>Document</title>
 </head>
 
+<script>
+    window.onload = function() {
+
+        console.log('funcionando');
+        var xhttp = new XMLHttpRequest();
+        usr = document.getElementById('input').input;
+
+        pass = document.getElementById('inputPass').value;
+        document.getElementById('buton').onclick = function() {
+
+            xhttp.onreadystatechange = callback();
+            xhttp.open("GET", "http://localhost:3000/loginUsuario?usr=" + usr + "&pass=" + pass + "", true);
+            xhttp.send();
+
+        };
+
+    }
+
+
+    function callback() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            //document.getElementById("demo").innerHTML = xhttp.responseText;
+
+            alert('alert');
+        }
+    }
+
+
+
+    var array = [{
+        'nombre': 'sofia',
+        'edad': '31'
+    }, {
+        'nombre': 'sofia',
+        'edad': '31'
+    }, {
+        'nombre': 'sofia',
+        'edad': '31'
+    }];
+
+
+    console.log(array);
+</script>
+
+
 <body>
+
+    <label for="" for=""></label><input id=input type="text">
+    <label for="" for=""></label><input id=inputPass type="password">
+
+    <button id="buton">Enviar</button>
+
 
 </body>
 
 </html>
-
-<script>
-    var http = new XMLHttpRequest();
-
-    http.open("GET", "http://localhost:3000/login", true);
-
-    http.send();
-</script>
